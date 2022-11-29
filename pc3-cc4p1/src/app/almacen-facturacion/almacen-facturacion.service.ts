@@ -13,7 +13,7 @@ export class AlmacenFacturacionService {
   private urlEndPoint: string = 'http://localhost:8080/consultar-rol';
 
 
-  getRol(producto: string, cantidad: number): Observable<any[]> {
+  getInformacion(producto: string, cantidad: number): Observable<any[]> {
     return this.http.get<any[]>(`${this.urlEndPoint}/${producto}/${cantidad}`).pipe(
       catchError(e => {
         return throwError(() => e);

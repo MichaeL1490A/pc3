@@ -38,10 +38,8 @@ import { TableModule } from 'primeng/table';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-
-      { path: '', component: MainComponent },
-      { path: 'almacen', component: AlmacenFacturacionComponent },
-
+      { path: '', component: AlmacenFacturacionComponent },
+      { path: 'login', component: MainComponent },
     ]),
     BrowserAnimationsModule,
     TabMenuModule,
