@@ -1,0 +1,8 @@
+body {
+    background-color: aqua;
+    font-family: sans-serif;
+}
+
+.c {
+    outline: 1px solid black;
+}

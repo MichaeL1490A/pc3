@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div class="row mx-auto mt-2 px-5">
+    <div class="col-6">
+        <p-table [value]="productos">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width:10px" class="text-center">Nro.</th>
+                    <th style="width:20px">Producto</th>
+                    <th style="width:100px">Cantidad</th>
+                    <th style="width:100px">Consultar</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-p let-i="rowIndex">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{p.nombre}}</td>
+                    <td><input type="text" pInputText [(ngModel)]="p.canitdad"></td>
+                    <td>
+                        <p-button (click)="obtenerInformacion(p.nombre)">Obtener&nbsp;información</p-button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,18 @@
+.input-text {
+    height: 40px !important;
+}
+
+.input-text:focus {
+    height: 40px !important;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.formulario {
+    margin-top: 80px;
+    width: 40%;
+    background-color: #222;
+    border-radius: 5px;
+}

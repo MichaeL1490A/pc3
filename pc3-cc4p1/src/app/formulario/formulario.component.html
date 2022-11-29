@@ -1,0 +1,25 @@
+<div class="container text-center p-5 c formulario">
+    <div class="row text-center">
+        <div class="col-12 text-uppercase title text-light">Iniciar&nbsp;Sesión</div>
+    </div>
+    <div class="row">
+        <div class="col-12" style="text-align:left">
+            <div class="p-2 text-light">
+                <span>Ingrese&nbsp;su&nbsp;correo</span>
+            </div>
+            <div class="px-1">
+                <input class="w-100 input-text" pInputText type="text" [(ngModel)]="email" placeholder="correo">
+            </div>
+            <div class="p-2 text-light">
+                <span>Ingrese&nbsp;su&nbsp;contraseña</span>
+            </div>
+            <div class="px-1">
+                <input class="w-100 input-text" pInputText type="password" [(ngModel)]="password"
+                    placeholder="contraseña">
+            </div>
+            <div class="col-12 p-2 text-center">
+                <p-button class="col-1 m-4" (click)="eventoIniciar()">Iniciar</p-button>
+            </div>
+        </div>
+    </div>
+</div>
