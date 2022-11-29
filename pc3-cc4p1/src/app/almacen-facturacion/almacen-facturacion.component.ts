@@ -38,24 +38,24 @@ export class AlmacenFacturacionComponent implements OnInit {
 
 
 
-  obtenerInformacion(producto: string, cantidad: number) {
-    if (cantidad == null) {
+  obtenerInformacion(i: number) {
+    if (this.productos[i].cantidad == null) {
       this.toastService.showError('Falta información', 'Debe colocar la cantidad del producto')
       return
     }
 
-    this.almacenFacturacionService.getInformacion(producto, cantidad);
+    this.almacenFacturacionService.getInformacion(this.productos[i].producto, this.productos[i].cantidad, i.toString());
 
-    this.detalleProducto[0].producto = producto
-    this.detalleProducto[0].cantidad = cantidad
-    this.detalleProducto[0].descripcion = 'Este producto es un ' + producto
+    this.detalleProducto[0].producto = this.productos[i].nombre
+    this.detalleProducto[0].cantidad = this.productos[i].cantidad
+    this.detalleProducto[0].descripcion = 'Este producto es un ' + this.productos[i].nombre
     this.detalleProducto[0].precioUnidad = Math.round(Math.random() * 100) / 100
-    this.detalleProducto[0].factura = 'S/. ' + cantidad * this.detalleProducto[0].precioUnidad
+    this.detalleProducto[0].factura = 'S/. ' + this.productos[i].cantidad * this.detalleProducto[0].precioUnidad
   }
 
 
   realizarCompra() {
-    if (this.detalleProducto[0].producto == null) {
+    if (this.detalleProducto[0].cantidad == null) {
       this.toastService.showError('Falta información', 'Seleccione un producto para poder realizar la compra')
       return
     }
