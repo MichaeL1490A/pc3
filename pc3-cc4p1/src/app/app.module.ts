@@ -13,7 +13,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
@@ -23,6 +23,9 @@ import { AlmacenFacturacionComponent } from './almacen-facturacion/almacen-factu
 import { MainComponent } from './main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TableModule } from 'primeng/table';
+import { Pc4Component } from './pc4/pc4.component';
+import { GraphQLModule } from './graphql.module';
+import { FileUploadModule } from 'primeng/fileupload';
 
 
 
@@ -33,12 +36,13 @@ import { TableModule } from 'primeng/table';
     FormularioComponent,
     FooterComponent,
     AlmacenFacturacionComponent,
-    MainComponent
+    MainComponent,
+    Pc4Component
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: AlmacenFacturacionComponent },
+      { path: '', component: Pc4Component },
       { path: 'login', component: MainComponent },
     ]),
     BrowserAnimationsModule,
@@ -50,11 +54,14 @@ import { TableModule } from 'primeng/table';
     ButtonModule,
     InputTextModule,
     FormsModule,
+    ReactiveFormsModule,
     MessagesModule,
     MessageModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    TableModule
+    TableModule,
+    GraphQLModule,
+    FileUploadModule
 
 
   ],

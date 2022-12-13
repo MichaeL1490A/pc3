@@ -1,0 +1,11 @@
+<div class="main">
+    <h3 class="my-3">Programación&nbsp;Concurrente&nbsp;y&nbsp;Distribuida&nbsp;-&nbsp;PC4</h3>
+
+    <div class="row text-center">
+        <div class="col-12">
+            <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000"
+                (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
+            <button class="submit-button">Subir&nbsp;Archivo</button>
+        </div>
+    </div>
+</div>
